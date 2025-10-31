@@ -1,0 +1,76 @@
+{
+  "models": {
+    "default": "claude-sonnet-4-5-20250929",
+    "sonnet": "claude-sonnet-4-5-20250929",
+    "opus": "claude-opus-4-20250514",
+    "haiku": "claude-3-5-haiku-20241022"
+  },
+  "permissions": {
+    "mode": "trusted",
+    "allowedTools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Glob",
+      "Grep",
+      "Bash",
+      "Task",
+      "TodoWrite",
+      "WebFetch",
+      "WebSearch"
+    ],
+    "disallowedTools": []
+  },
+  "guardrails": {
+    "writeScope": [
+      "src/**",
+      "app/**",
+      "docs/**",
+      "packages/**",
+      "scripts/**",
+      "skills/**",
+      ".claude/**"
+    ],
+    "protectedFiles": [
+      ".env*",
+      "infra/**",
+      "Dockerfile",
+      ".git/**",
+      "node_modules/**"
+    ],
+    "requireTestsToPass": true
+  },
+  "mcp": {
+    "servers": {
+      "playwright": {
+        "enabled": "auto",
+        "config": ".claude/mcp/playwright.config.json"
+      },
+      "filesystem": {
+        "enabled": true,
+        "config": ".claude/mcp/fs.config.json"
+      },
+      "git": {
+        "enabled": true,
+        "config": ".claude/mcp/git.config.json"
+      },
+      "browser": {
+        "enabled": "auto",
+        "config": ".claude/mcp/browser.config.json"
+      },
+      "jina": {
+        "enabled": "auto",
+        "config": ".claude/mcp/jina.config.json"
+      }
+    }
+  },
+  "hooks": {
+    "preToolUse": [],
+    "postToolUse": [],
+    "sessionStart": [],
+    "sessionEnd": []
+  },
+  "maxTurns": 50,
+  "outputFormat": "markdown",
+  "verbose": false
+}

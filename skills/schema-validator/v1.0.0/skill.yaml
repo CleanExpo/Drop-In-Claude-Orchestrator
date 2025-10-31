@@ -1,0 +1,7 @@
+name: schema-validator
+version: 1.0.0
+description: "Validates data against JSON schemas"
+runtime: python
+entry_point: main.py
+dependencies:
+  - requirements.txt

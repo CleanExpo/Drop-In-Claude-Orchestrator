@@ -4,6 +4,14 @@ A production-ready orchestration framework for Claude/Cline that coordinates spe
 
 ## ⚡ What's New
 
+**Version 1.2 - Claude Integration Suite** (Latest)
+- 🚀 **Claude Code CLI** - Fast REPL, print-mode scripting, JSON output, subagent configuration
+- 💻 **Agent SDK Integration** - Programmatic agent control with TypeScript
+- 🎯 **Agent Skills** - Pre-built (PDF, Excel, etc.) and custom packaged capabilities
+- 📦 **Monorepo Structure** - TypeScript packages with pnpm workspaces
+- 🔧 **Enhanced Scripts** - CLI helpers for dev, planning, and subagent modes
+- 📚 **Comprehensive Docs** - Integration guide with examples and best practices
+
 **Version 1.1 - Smart Initialization System**
 - 🔍 **Auto-Detection** - Automatically detects 15+ project types with 85%+ accuracy
 - ⚡ **5-Minute Setup** - From zero to productive in 5 minutes (85% faster than manual)
@@ -32,6 +40,7 @@ A production-ready orchestration framework for Claude/Cline that coordinates spe
 
 The Drop-In Claude Orchestrator provides structured AI-assisted development through:
 
+- **Claude Integration Suite** - CLI, Agent SDK, and Skills for programmatic control
 - **Smart Initialization** - Auto-detect project type, guided setup, optimal configuration
 - **Specialized Agents** - Focused roles (coder, tester, research, devops, etc.)
 - **Hierarchical Architecture** - Support for supervisor agents and assembly line workflows
@@ -210,7 +219,17 @@ JSON contracts between agents:
 
 ```
 dropin-claude-orchestrator/
+├── packages/                    # TypeScript packages
+│   ├── claude-sdk/             # Agent SDK integration
+│   └── skills-runner/          # Agent Skills integration
+├── skills/                      # Custom Agent Skills
+│   ├── code-validator/         # Code validation skill
+│   └── schema-validator/       # Schema validation skill
 ├── scripts/
+│   ├── claude/                 # Claude CLI scripts
+│   │   ├── dev.sh/ps1         # Development REPL
+│   │   ├── plan.sh/ps1        # Planning mode
+│   │   └── subagents.sh/ps1   # Subagent configuration
 │   ├── install.ps1              # Windows installation
 │   ├── install.sh               # macOS/Linux installation
 │   ├── update.ps1/sh            # Safe updates
@@ -239,6 +258,7 @@ dropin-claude-orchestrator/
 │       ├── guardrails.md        # Safety rules
 │       └── handoffs.md          # Agent contracts
 ├── docs/
+│   ├── integration-claude.md    # Claude CLI/SDK/Skills integration (NEW!)
 │   ├── getting-started.md       # Quick setup guide
 │   ├── rationale.md             # Architecture decisions
 │   ├── safety.md                # Security guidelines
@@ -625,7 +645,16 @@ Contributions welcome! Areas of interest:
 - ✅ Detection scripts
 - ✅ Comprehensive docs
 
-### v1.1 (Current - Released Oct 2025)
+### v1.2 (Current - Released Oct 2025)
+- ✅ **Claude Code CLI Integration** - REPL, print-mode, JSON output, subagent support
+- ✅ **Agent SDK Package** - TypeScript SDK for programmatic agent control
+- ✅ **Agent Skills Integration** - Pre-built and custom skills via Messages API
+- ✅ **Monorepo Structure** - TypeScript packages with pnpm workspaces
+- ✅ **CLI Helper Scripts** - Dev, plan, and subagent mode scripts
+- ✅ **Custom Skills Examples** - Code validator and schema validator skills
+- ✅ **Integration Documentation** - Complete guide with examples
+
+### v1.1 (Released Oct 2025)
 - ✅ **Smart Initialization System** - Auto-detection for 15+ project types
 - ✅ **Handoff Validation** - Auto-repair and quality enforcement
 - ✅ **Hierarchical Architectures** - Supervisor + specialist patterns (example: PTA-MVP-001)

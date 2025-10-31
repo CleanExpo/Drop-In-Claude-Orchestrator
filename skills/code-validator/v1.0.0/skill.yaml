@@ -1,0 +1,7 @@
+name: code-validator
+version: 1.0.0
+description: "Validates code against orchestrator coding standards and guardrails"
+runtime: python
+entry_point: main.py
+dependencies:
+  - requirements.txt

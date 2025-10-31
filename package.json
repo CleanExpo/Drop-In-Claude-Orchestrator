@@ -1,0 +1,30 @@
+{
+  "name": "drop-in-claude-orchestrator",
+  "version": "1.2.0",
+  "description": "Production-ready orchestration framework for Claude with CLI, SDK, and Skills integration",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "pnpm -r run build",
+    "dev": "pnpm -r --parallel run dev",
+    "test": "pnpm -r run test",
+    "lint": "pnpm -r run lint",
+    "typecheck": "tsc --noEmit",
+    "dev:claude": "bash ./scripts/claude/dev.sh",
+    "plan:claude": "bash ./scripts/claude/plan.sh",
+    "clean": "pnpm -r run clean && rm -rf node_modules"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3",
+    "tsx": "^4.7.0",
+    "vitest": "^1.1.0"
+  },
+  "packageManager": "pnpm@8.15.0",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

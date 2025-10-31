@@ -1,0 +1,3 @@
+# No external dependencies required for basic JSON Schema validation
+# Future versions may use jsonschema package for full Draft 7 support:
+# jsonschema>=4.20.0
