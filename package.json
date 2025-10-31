@@ -8,11 +8,20 @@
     "build": "pnpm -r run build",
     "dev": "pnpm -r --parallel run dev",
     "test": "pnpm -r run test",
+    "test:skills": "python skills/code-validator/v1.0.0/test.py && python skills/schema-validator/v1.0.0/test.py",
     "lint": "pnpm -r run lint",
     "typecheck": "tsc --noEmit",
-    "dev:claude": "bash ./scripts/claude/dev.sh",
-    "plan:claude": "bash ./scripts/claude/plan.sh",
-    "clean": "pnpm -r run clean && rm -rf node_modules"
+    "clean": "pnpm -r run clean && rm -rf node_modules",
+    "quick-start": "bash ./scripts/quick-start.sh",
+    "claude:dev": "bash ./scripts/claude/dev.sh",
+    "claude:plan": "bash ./scripts/claude/plan.sh",
+    "claude:subagents": "bash ./scripts/claude/subagents.sh",
+    "example:cli": "bash ./examples/01-cli-basic.sh",
+    "example:sdk": "npx tsx examples/02-sdk-basic.ts",
+    "example:skills": "npx tsx examples/03-skills-basic.ts",
+    "example:ci": "bash ./examples/04-ci-headless.sh",
+    "example:workflow": "npx tsx examples/05-full-workflow.ts",
+    "examples": "npm run example:cli && npm run example:sdk && npm run example:skills"
   },
   "workspaces": [
     "packages/*"
