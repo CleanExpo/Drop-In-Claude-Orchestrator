@@ -138,6 +138,14 @@ agents:
     enabled: false               # Seeds/fixtures + schema sanity checks
     definition: ".claude/agents/master-data.md"
 
+  # MAOS (Multi-Agent Optimization System)
+  maos:
+    enabled: false               # Silent autonomous optimization agent
+    definition: ".claude/agents/maos.md"
+    autonomy: silent             # silent | verbose
+    max_changes_per_file: 10     # Limit optimization scope per file
+    require_tests_pass: true     # Phase gate - tests must pass
+
 # Stack Configuration
 stack:
   preset: "nextjs_fullstack"
@@ -233,3 +241,61 @@ phase_gates:
   tester_to_integrator: true     # Tester MUST pass before Integrator
   integrator_to_devops: false    # Optional gate before deployment
   manual_approval_production: true  # Require manual approval for production
+
+# MAOS Configuration (Multi-Agent Optimization System)
+maos:
+  optimization_profiles:
+    - code_quality               # Enable code quality optimizations
+    - performance                # Enable performance optimizations
+    - security                   # Enable security pattern implementation
+    - error_handling             # Enable error handling standardization
+    - testing                    # Enable test coverage improvements
+    - maintainability            # Enable maintainability improvements
+
+  excluded_paths:
+    - "node_modules/**"
+    - "dist/**"
+    - "build/**"
+    - ".next/**"
+    - "target/**"
+    - "__pycache__/**"
+    - ".venv/**"
+    - "vendor/**"
+
+  token_budget:
+    max_per_run: 60              # Maximum tokens per MAOS run
+    subagent_output: 0           # Subagents run silently
+
+  docker:
+    maintain_context: true       # Keep Docker context persistent
+    prevent_switching: true      # Prevent context switching
+
+  safety:
+    conservative_mode: false     # Enable for more cautious optimization
+    backup_before_run: true      # Backup before optimization
+    auto_rollback_on_fail: true  # Rollback if tests fail
+
+  subagents:
+    alpha:
+      enabled: true              # Project Scanner
+      cache_location: "/tmp/project_map"
+
+    beta:
+      enabled: true              # Documentation Compiler
+      cache_location: "/tmp/anthropic_patterns"
+
+    gamma:
+      enabled: true              # Pattern Analyzer
+      respect_existing: true     # Respect current patterns
+
+    delta:
+      enabled: true              # Code Optimizer
+      parallel_threads: 4        # Optimization threads
+
+    epsilon:
+      enabled: true              # Testing Validator
+      run_full_suite: true       # Run all tests
+
+    zeta:
+      enabled: true              # Resource Manager (daemon)
+      mode: "background"

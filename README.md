@@ -159,6 +159,23 @@ autonomy: trusted
 
 [Learn More](.claude/INITIALIZATION-WORKFLOW.md)
 
+### 🤖 MAOS: Multi-Agent Optimization System
+
+Silent, autonomous optimization of your codebase using Anthropic best practices:
+
+```
+@maos
+```
+
+- **Auto-Detection** - Recognizes your stack (Next.js, Python, Go, etc.)
+- **Silent Execution** - Minimal output, maximum efficiency (<60 tokens)
+- **Six Subagents** - Scanner, Compiler, Analyzer, Optimizer, Validator, Resource Manager
+- **Universal Patterns** - Error handling, security, performance, testing
+- **Non-Invasive** - Optimizes without changing structure or adding features
+- **Safe** - Validates tests pass, auto-rollback on failure
+
+Perfect for periodic maintenance, pre-release cleanup, or applying Anthropic patterns across your entire codebase. See **[MAOS Documentation](docs/maos.md)** for details.
+
 ### 🎯 Specialized Agents
 
 **Core Agents:**
@@ -173,6 +190,9 @@ autonomy: trusted
 - **master-devops** - CI/CD with deployment guardrails
 - **master-docs** - README/ADR/CHANGELOG generation
 - **master-data** - Seeds, fixtures, data integrity
+
+**Optimization Agent:**
+- **maos** - Multi-Agent Optimization System for silent, autonomous codebase refinement
 
 ### 🔒 Safety First
 
@@ -318,6 +338,28 @@ Orchestrator workflow:
 Result: Zero-downtime production deployment
 ```
 
+### Optimization
+
+```
+Request: "@maos"
+
+MAOS workflow:
+1. ALPHA - Scan project (Next.js 14 detected)
+2. BETA + GAMMA - Load patterns + Analyze code (parallel)
+3. DELTA - Apply optimizations (4 threads)
+   - Error handling standardization
+   - Performance improvements
+   - Security patterns
+   - Code consistency
+4. EPSILON - Validate (all tests pass)
+
+Result: [MAOS] OPTIMIZATION COMPLETE
+        Project: Next.js 14 Full-stack
+        Files optimized: 47
+        Patterns applied: 12
+        Tests status: 156 PASS / 0 FAIL
+```
+
 ## 🎯 Real-World Example: PTA-MVP-001
 
 **Project:** Prophetic Transcript Analyzer - A transcript analysis tool with future-proof spatial data integration
@@ -458,6 +500,7 @@ steps:
 - **[Rationale](docs/rationale.md)** - Why this architecture
 - **[Safety & Security](docs/safety.md)** - Security guidelines
 - **[Customizing](docs/customizing.md)** - Extend the orchestrator
+- **[MAOS](docs/maos.md)** - Multi-Agent Optimization System
 - **[Windows Notes](docs/windows-notes.md)** - Windows-specific help
 
 ### Policies & Configuration
