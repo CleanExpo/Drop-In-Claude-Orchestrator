@@ -15,7 +15,7 @@ A production-ready orchestration framework for Claude/Cline that coordinates spe
 **Version 1.1 - Smart Initialization System**
 - 🔍 **Auto-Detection** - Automatically detects 15+ project types with 85%+ accuracy
 - ⚡ **5-Minute Setup** - From zero to productive in 5 minutes (85% faster than manual)
-- 🎯 **Custom Configurations** - Example: PTA-MVP-001 with hierarchical agent architecture
+- 🎯 **Custom Configurations** - Hierarchical agent architecture support with examples
 - 🛡️ **Enhanced Quality** - Handoff validation with auto-repair, phase gate enforcement
 - 📊 **Reduced Errors** - Configuration errors down from ~30% to <5%
 
@@ -26,7 +26,7 @@ A production-ready orchestration framework for Claude/Cline that coordinates spe
 - [Overview](#overview)
 - [Quick Start](#quick-start)
 - [Key Features](#key-features)
-- [Real-World Example: PTA-MVP-001](#-real-world-example-pta-mvp-001)
+- [Example Project: PTA-MVP-001](#-example-project-pta-mvp-001)
 - [Configuration](#configuration)
 - [Workflows](#workflows)
 - [Documentation](#documentation)
@@ -360,63 +360,28 @@ Result: [MAOS] OPTIMIZATION COMPLETE
         Tests status: 156 PASS / 0 FAIL
 ```
 
-## 🎯 Real-World Example: PTA-MVP-001
+## 🎯 Example Project: PTA-MVP-001
 
-**Project:** Prophetic Transcript Analyzer - A transcript analysis tool with future-proof spatial data integration
+Want to see the orchestrator in action with advanced features? Check out our **Prophetic Transcript Analyzer (PTA)** example project:
 
-### Architecture: Hierarchical Supervisor Assembly Line
+**[View Complete Example →](examples/projects/pta-mvp-001/)**
 
-This project demonstrates the orchestrator's advanced capabilities with a custom agent hierarchy:
+This reference implementation demonstrates:
+- ✅ **Hierarchical Supervisor Architecture** - Queen Agent coordinating 5 specialist agents
+- ✅ **Future-Proof Schema Design** - Reserved fields for zero-downtime feature additions
+- ✅ **Phase Gate Enforcement** - Blocking test agent ensures quality
+- ✅ **Workflow Guarantees** - Mandatory execution order (Prophecy Engine runs first)
+- ✅ **Error Recovery Patterns** - Retry logic, graceful degradation, escalation
+- ✅ **Zero-Cost MVP Stack** - SQLite, free APIs, free deployment tier
 
-```
-Queen Agent (Supervisor)
-    ↓
-Prophecy Engine Swarm (MUST RUN FIRST - defines future-proof schema)
-    ↓
-Ingestion Agent (YouTube transcript fetching + DB initialization)
-    ↓
-Segmenter Agent (NLP segmentation + focus filtering)
-    ↓
-Formatter Agent (JSON schema enforcement)
-    ↓
-Test Agent (BLOCKING phase gate - validation required)
-    ↓
-Queen Agent (Final delivery)
-```
+The PTA example includes:
+- Complete project configuration
+- 6 custom agent definitions
+- Initialization walkthrough
+- MoSCoW prioritization example
+- Quality assurance patterns
 
-### Key Features
-
-**Prophetic Data Contract:**
-- Reserved schema fields for future spatial data layer integration
-- `spatial_tags: Array[String]` - Empty in MVP, ready for geospatial tags
-- `geospatial_tag: String` - Empty in MVP, ready for location data
-- Zero-downtime future feature additions without breaking changes
-
-**MoSCoW Prioritization:**
-- MUST HAVE: Transcript ingestion, spatial schema (even if empty), schema compliance
-- SHOULD HAVE: Focus filtering (TECHNICAL/MARKETING/GENERAL), competitive analysis
-- COULD HAVE: Content repurposing, Markdown reports
-- WON'T HAVE: User accounts, multi-video search (out of MVP scope)
-
-**Quality Assurance:**
-- BLOCKING phase gate at Test Agent (tests must pass for delivery)
-- Schema validation with Prophecy Contract field presence checks
-- 80% test coverage target
-- Integration tests for full pipeline
-
-**Timeline:** 1-week MVP with future enhancements planned
-
-[View Complete Configuration →](.claude/projects/PTA-MVP-001-config.yaml)
-[View Initialization Summary →](.claude/projects/PTA-INITIALIZATION-SUMMARY.md)
-
-### What This Demonstrates
-
-✅ **Custom Agent Architectures** - Build supervisor + specialist hierarchies
-✅ **Future-Proof Design** - Reserved fields enable zero-downtime feature additions
-✅ **Phase Gate Enforcement** - Blocking agents ensure quality before delivery
-✅ **Workflow Guarantees** - Mandatory execution order (Prophecy Engine first)
-✅ **Error Recovery** - Queen Agent handles retries, degradation, escalation
-✅ **Zero-Cost MVP** - SQLite, free APIs, free deployment tier
+Perfect for learning how to build complex multi-agent workflows with the orchestrator.
 
 ## Configuration
 
@@ -700,11 +665,11 @@ Contributions welcome! Areas of interest:
 ### v1.1 (Released Oct 2025)
 - ✅ **Smart Initialization System** - Auto-detection for 15+ project types
 - ✅ **Handoff Validation** - Auto-repair and quality enforcement
-- ✅ **Hierarchical Architectures** - Supervisor + specialist patterns (example: PTA-MVP-001)
+- ✅ **Hierarchical Architectures** - Supervisor + specialist patterns with example projects
 - ✅ **Enhanced Documentation** - Quick-start guides, workflow documentation (~6,800 lines)
 - ✅ **Quality Improvements** - 85% faster setup, 83% fewer errors
 - ✅ **Phase Gate Enforcement** - Blocking agents for quality assurance
-- ✅ **Project Examples** - Real-world configurations (PTA-MVP-001)
+- ✅ **Project Examples** - Real-world reference implementations in /examples
 
 ### v1.2 (Planned - Q4 2025)
 - [ ] Visual workflow designer UI
@@ -736,7 +701,7 @@ MIT License - see [LICENSE](LICENSE) for details.
 **Need Help?**
 - 📖 [Quick Start Guide](.claude/QUICK-START-INITIALIZATION.md) - Get started in 5 minutes
 - 📚 [Complete Documentation](.claude/INITIALIZATION-WORKFLOW.md) - Deep dive into features
-- 💡 [Real-World Example](.claude/projects/PTA-MVP-001-config.yaml) - See it in action
+- 💡 [Example Projects](examples/projects/) - See it in action
 - 🐛 [Report Issues](https://github.com/CleanExpo/Drop-In-Claude-Orchestrator/issues) - Found a bug?
 
 **Contribute:**
@@ -748,9 +713,9 @@ MIT License - see [LICENSE](LICENSE) for details.
 ## Quick Links
 
 - **Get Started:** [Installation](#quick-start) | [Initialize](.claude/QUICK-START-INITIALIZATION.md)
-- **Learn More:** [Documentation](#documentation) | [Examples](#-real-world-example-pta-mvp-001)
+- **Learn More:** [Documentation](#documentation) | [Examples](#-example-project-pta-mvp-001)
 - **See Changes:** [What's New](#-whats-new) | [Improvements](#-improvements--metrics)
-- **Advanced:** [Custom Agents](#custom-agents) | [Hierarchical Architecture](.claude/projects/PTA-MVP-001-config.yaml)
+- **Advanced:** [Custom Agents](#custom-agents) | [Example Projects](examples/projects/pta-mvp-001/)
 
 ---
 
